@@ -17,9 +17,13 @@ use Illuminate\Support\Facades\Route;
     return view('welcome');
 });*/
 
-Route::get('/', function () {
-    return view('page.home');
-});
+//Route::get('/', function () {
+//    return view('page.home',['name' => 'Test laravel project','disp'=>'This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.']);
+//});
+
+
+
+/*
 
 Route::get('/contact', function () {
     return view('page.contact');
@@ -28,4 +32,7 @@ Route::get('/contact', function () {
 
 Route::get('/abouts', function () {
     return view('page.abouts');
-});
+});*/
+Route::get('/', 'pagecontroller@home');
+Route::get('abouts', 'pagecontroller@abouts');
+Route::get('contact', 'pagecontroller@contact');
